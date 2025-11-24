@@ -1,0 +1,21 @@
+{
+  "name": "Sistema de Gestión Escolar - EJEMPLO DE VIDA",
+  "short_name": "Gestión Escolar",
+  "description": "Plataforma completa para la gestión de calificaciones, estudiantes y docentes",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8c030e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "lang": "es",
+  "dir": "ltr"
+}

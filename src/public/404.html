@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redireccionando... - Sistema de Gestión Escolar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .container {
+      background: white;
+      padding: 60px 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(140, 3, 14, 0.15);
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 4px solid #fee2e2;
+      border-top: 4px solid #8c030e;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 30px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    h1 {
+      color: #8c030e;
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    
+    .redirect-info {
+      margin-top: 30px;
+      padding: 15px;
+      background: #fef2f2;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #8c030e;
+    }
+  </style>
+  
+  <!-- Redirección para SPA en GitHub Pages -->
+  <script>
+    // Guardar la ruta intentada en sessionStorage
+    sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+    
+    // Redireccionar a index.html
+    var pathSegmentsToKeep = 1; // Para GitHub Pages: /repo-name/
+    var l = window.location;
+    
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?redirect=' +
+      encodeURIComponent(l.pathname.substring(1) + l.search + l.hash)
+    );
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="spinner"></div>
+    <h1>Redireccionando...</h1>
+    <p>Estás siendo redireccionado a la aplicación.</p>
+    <div class="redirect-info">
+      Si no eres redireccionado automáticamente, 
+      <a href="./index.html" style="color: #8c030e; font-weight: 600;">haz clic aquí</a>
+    </div>
+  </div>
+</body>
+</html>

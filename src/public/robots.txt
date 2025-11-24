@@ -1,0 +1,13 @@
+# robots.txt para Sistema de Gestión Escolar
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tu-usuario.github.io/tu-repo/sitemap.xml
+
+# Evitar indexar assets
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Permitir imágenes
+Allow: /assets/images/
