@@ -54,7 +54,8 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: 'docs', // <<---- ESTE CAMBIO ES EL IMPORTANTE
+      emptyOutDir: true,
     },
     server: {
       port: 3000,
